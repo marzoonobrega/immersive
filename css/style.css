@@ -1,30 +1,342 @@
-body{
-  background:#000000;
-  color:#00FF00;
-  font-family:monospace;
+* {
+  color: green;
+  cursor: default;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0,9em;
+  letter-spacing: 1.5px;
 }
 
-.accessGranted{
-  position:absolute;
-  top:200px;
-  background:#333;
-  padding:20px;
-  border:1px solid #999;
-  width:300px;
-  left:50%;
-  margin-left:-150px;
-  text-align:center;
+html,
+body {
+  background-color: black;
+  color: green;
+  margin: 0;
+  padding: 15px 15px 15px 15px;
 }
 
-.accessDenied{
-  position:absolute;
-  top:200px;
-  color:#F00;
-  background:#511;
-  padding:20px;
-  border:1px solid #F00;
-  width:300px;
-  left:50%;
-  margin-left:-150px;
-  text-align:center;
+#welcome-login {
+  margin: 0 5%;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  width: 90%;
+  z-index: 99;
 }
+
+h1 {
+  font-size: 5em;
+  margin: 0;
+}
+
+#login-input {
+  background: black;
+  border: solid 1px;
+  border-radius: 1em;
+  cursor: text;
+  margin-bottom: 1em;
+  opacity: 0;
+	outline: none;
+  text-align: center;
+  width: 10em;
+}
+
+#terminal {
+  border: none;
+  height: calc(100% - 3em);
+  opacity: 0;
+  overflow-y: auto;
+  position: fixed;
+  width: 100%;
+}
+
+#root {
+  bottom: 0;
+  height: 2.6em;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  width: 1em;
+}
+
+
+#landingimage{
+   background-image: url('../img/landing.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 40;
+    text-indent: -9999px;
+    height: 400px;
+    text-align: center;
+}
+
+#input {
+  background: black;
+  border: none;
+  bottom: 1em;
+  cursor: text;
+  display: none;
+  height: 1.9em;
+  margin: 0;
+	outline: none;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 1em);
+}
+
+#blinking {
+  -webkit-animation: blink 1s linear 0s infinite;
+  -moz-animation: blink 1s linear 0s infinite;
+  -ms-animation: blink 1s linear 0s infinite;
+  -o-animation: blink 1s linear 0s infinite;
+  animation: blink 1s linear 0s infinite;
+}
+
+@-webkit-keyframes blink {
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+}
+
+@-moz-keyframes blink {
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+}
+
+@-ms-keyframes blink {
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+}
+
+@-o-keyframes blink {
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+}
+
+#time {
+  opacity: 0;
+  position: fixed;
+  right: 1em;
+  top: .5em;
+}
+
+#objectives {
+  opacity: 0;
+  position: fixed;
+  right: .5em;
+  top: 1em;
+  width: 25%;
+}
+
+#won,
+#lost {
+  display: none;
+  opacity: 0;
+}
+
+#objectives li {
+  opacity: 0;
+}
+
+::-webkit-scrollbar {
+    width: .5em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0em 0em .5em rgba(0, 255, 0, .25);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0em 0em .25em rgba(0, 255, 0, .5);
+}
+
+footer {
+  bottom: 0;
+  font-size: .8em;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* LANDING PAGE EFFECTS
+___________________________________________________________________
+___________________________________________________________________
+*/
+
+#firstobjectives {
+  position: fixed;
+  right: .5em;
+  top: 1em;
+  width: 25%;
+}
+
+.landingimage{
+   background-image: url('../img/landing.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 40;
+    text-indent: -9999px;
+    height: 400px;
+    text-align: center;
+}
+
+/* LANDING PAGE FADE IN EFFECT
+___________________________________________________________________
+___________________________________________________________________
+*/
+
+#fadeload {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* STYLING FOR ABOUT PAGE
+___________________________________________________________________
+___________________________________________________________________
+*/
+
+span {
+  min-width: 5px;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  color: green;
+}
+
+.text {
+  overflow: hidden;
+  height: auto;
+
+}
+
+input{
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  color: green;
+  background: #111;
+  margin-left: 60px;
+  border-style: none;
+}
+
+
+/* STYLING FOR YOUTUBE VIDEO
+___________________________________________________________________
+___________________________________________________________________
+*/
+
+ iframe{
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+ }
+
+ #wrapper{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 900px;
+  padding-top: 100px;
+ }
+
+
+/* The video background*/
+
+ .video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+  top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+
+
+
