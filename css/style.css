@@ -35,7 +35,7 @@ h1 {
   cursor: text;
   margin-bottom: 1em;
   opacity: 0;
-	outline: none;
+  outline: none;
   text-align: center;
   width: 10em;
 }
@@ -337,6 +337,31 @@ ___________________________________________________________________
 @media (max-aspect-ratio: 16/9) {
   .video-foreground { width: 300%; left: -100%; }
 }
+
+
+/*
+MEDIA QUERRIES
+___________________________________________________
+___________________________________________________
+*/
+
+/* Media Querries for Medium display display*/
+
+@media screen and (min-width: 769px) and (max-width: 1025px){
+         * {
+		  font-size: 1,2em;
+		}
+	}
+
+@media screen and (min-width:100px) and (max-width: 769px){
+		input{
+           font-size: 8em;
+		}
+		input[type=text]{
+			height: 20px;
+		}
+    }
+
 
 
 
