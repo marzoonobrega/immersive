@@ -32,16 +32,16 @@ $(document).ready(function() {
       window.setInterval(function() {
         if (won === 0) {
           if (help === 1) {
-            $('#objectives #help').css({'color': 'red'});
+            $('#objectives #help').css({'text-decoration': 'line-through'});
             $('#objectives #list').animate({'opacity': '1'}, 1000);
             if (list === 1) {
-              $('#objectives #list').css({'color': 'red'});
+              $('#objectives #list').css({'text-decoration': 'line-through'});
               $('#objectives #connect').animate({'opacity': '1'}, 1000);
               if (connect === 1) {
-                $('#objectives #connect').css({'color': 'red'});
+                $('#objectives #connect').css({'text-decoration': 'line-through'});
                 $('#objectives #trojan').animate({'opacity': '1'}, 1000);
                 if (trojan === 1) {
-                  $('#objectives #trojan').css({'color': 'red'});
+                  $('#objectives #trojan').css({'text-decoration': 'line-through'});
                   $('#objectives #disconnect').animate({'opacity': '1'}, 1000);
                 }
               }
